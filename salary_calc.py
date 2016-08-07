@@ -9,7 +9,7 @@ position= input("Enter your job position: ")
 def regPay():
 #Computes regular hours weekly pay
     hwage= float(input("Enter hourly wage rate: "))
-    tothours=int(input("Enter total regular hours you worked this week: "))
+    tothours=float(input("Enter total regular hours you worked this week: "))
     regular_pay= float(hwage * tothours)
     print ("Your regular pay for this week is: ", regular_pay)
     return hwage, regular_pay
@@ -21,7 +21,7 @@ def overTime(hwage, regular_pay):
     otpay= totot_hours * ot_rate 
     print("The total overtime pay this week is: " ,otpay )
     sum = otpay + regular_pay 
-    print("So total pay due this week is: ", sum)
+    print("So total pay due this week is: %6.2f " % sum)
     super_pay = float((9.5/100)*sum)
     print ("Your super contribution this week is:",super_pay)
     return super_pay 
