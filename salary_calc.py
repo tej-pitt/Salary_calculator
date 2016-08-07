@@ -54,7 +54,7 @@ def taxpay():
             break
         else:
             print ("Invalid input. Enter again please.")
-            break
+            continue
                     
 def super(x):
 #Computes super over a gross income at a rate of 9.5%
@@ -67,7 +67,6 @@ def main():
 #Main function to pass vars from regPay to overTime and call.
     hw , r_p = regPay()
     overTime(hw, r_p)
-    taxpay()
     y = taxpay()
     super(y)
         
